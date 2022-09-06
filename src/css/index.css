@@ -1,0 +1,19 @@
+.Login-container{
+    border-radius: 25px!important;
+    background-color: black;
+}
+.Remember{
+    font-size: 14px;
+}
+.submit{
+    border:1px solid red!important;
+    background-color: red !important;
+    box-shadow: 5px 5px 20px red;
+    font-size: 20px!important;
+}
+.email,.password{
+    font-size: 16px!important;
+}
+.email-box, .password-box{
+    height: 35px!important;
+}
