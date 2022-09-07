@@ -28,27 +28,27 @@ export default function ForgotPassword() {
 
   return (
     <>
-      <Card>
+      <Card className="border-danger Login-container">
         <Card.Body>
-          <h2 className="text-center mb-4">Password Reset</h2>
+          <h5 className="text-danger mb-4">Password Reset</h5>
           {error && <Alert variant="danger">{error}</Alert>}
           {message && <Alert variant="success">{message}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" ref={emailRef} required />
+              <Form.Label className="email">Email</Form.Label>
+              <Form.Control type="email" ref={emailRef} required className="email-box" />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
+            <Button disabled={loading} className="w-100 submit" type="submit">
               Reset Password
             </Button>
           </Form>
           <div className="w-100 text-center mt-3">
-            <Link to="/login">Login</Link>
+            <Link to="/login" className="text-danger">Login</Link>
           </div>
         </Card.Body>
       </Card>
-      <div className="w-100 text-center mt-2">
-        Need an account? <Link to="/signup">Sign Up</Link>
+      <div className="w-100 text-center mt-2 Remember">
+        Need an account? <Link to="/signup" className="text-danger">Sign Up</Link>
       </div>
     </>
   )
